@@ -3,7 +3,7 @@
   width: 400px;
   padding: 20px 30px;
   background: #fff;
-  border: 1px solid #dfdfdf;
+  border: 2px solid #00c3d1;
   transform-style: preserve-3d;
   perspective-origin: 50px center;
   perspective: 2000px;
@@ -82,7 +82,7 @@
   text-align: center;
   font-weight: bold;
   color: #fff;
-  background: linear-gradient(45deg, #e53935, #e35d5b);
+  background-color: #00c3d1;
   margin-top: 20px;
   padding: 14px;
   position: relative;
@@ -175,7 +175,7 @@
 
 input:active, input:focus, button:active, button:focus {
   outline: none;
-  border: 1px solid #e77371;
+  border: 1px solid #00c3d1;
 }
 
 @-webkit-keyframes formComplete {
@@ -211,12 +211,14 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(45deg, #83a4d4, #b6fbff);
+  background: linear-gradient(45deg, #ad0074, #b700ff);
+
   
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
+  font-family: 'Cutive Mono', monospace;
 }
 
 span.close {
@@ -225,7 +227,7 @@ span.close {
   justify-content: flex-end;
 }
 
-span.close.hover {
+.close.hover {
   cursor: pointer;
 }
 
@@ -234,6 +236,7 @@ span.close.hover {
   flex-wrap: wrap;
   position: fixed;
   top: 20%;
+  justify-content: center;
 }
 
 
@@ -243,10 +246,49 @@ span.close.hover {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  border: 1px solid black;
+  border: 1px solid #fff;
   height: 20vh;
   width: 33vw;
+  background-color: #00c3d1;
+  margin: 5px;
+  border-radius: 5px;
+  color: #fff;
 
+}
+
+button#newBtn {
+  height: 5vh;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+button#newBtn:hover {
+  box-shadow: 10px 5px 5px #333;
+  transform: translateZ(13px);
+}
+
+button#removeBtn {
+  display: block;
+  width: 80%;
+  border: 0;
+  text-align: center;
+  font-weight: bold;
+  color: #00c3d1;
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 14px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(26px);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+button#removeBtn:hover {
+  box-shadow: 10px 5px 5px #333;
 }
 
 @media only screen and (max-width: 600px) {
