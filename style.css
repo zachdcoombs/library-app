@@ -8,6 +8,8 @@
   perspective-origin: 50px center;
   perspective: 2000px;
   transition: transform 1s ease;
+  display: none;
+  z-index: 1;
 }
 .form::before, .form::after {
   content: "";
@@ -20,10 +22,9 @@
   top: 0;
   transform: translateZ(-100px);
   background: #333;
-  opacity: 0.3;
 }
 .form::after {
-  content: "SUCCESS!";
+  content: "ADDED";
   transform: translateY(-50%) translateZ(-101px) scaleX(-1);
   top: 50%;
   color: #fff;
@@ -139,7 +140,7 @@
   right: 0;
 }
 
-.book .icon::before, .book .icon::after {
+.title .icon::before, .title .icon::after {
   background: url(https://image.flaticon.com/icons/svg/131/131040.svg) center/contain no-repeat;
 }
 
@@ -172,11 +173,6 @@
           animation: formComplete 2s ease;
 }
 
-.form-error {
-  -webkit-animation: formError 2s ease;
-          animation: formError 2s ease;
-}
-
 input:active, input:focus, button:active, button:focus {
   outline: none;
   border: 1px solid #e77371;
@@ -199,34 +195,7 @@ input:active, input:focus, button:active, button:focus {
     transform: rotateX(0deg) rotateY(1turn);
   }
 }
-@-webkit-keyframes formError {
-  0%, 100% {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
-  25% {
-    transform: rotateX(-25deg);
-  }
-  33% {
-    transform: rotateX(-25deg) rotateY(45deg);
-  }
-  66% {
-    transform: rotateX(-25deg) rotateY(-30deg);
-  }
-}
-@keyframes formError {
-  0%, 100% {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
-  25% {
-    transform: rotateX(-25deg);
-  }
-  33% {
-    transform: rotateX(-25deg) rotateY(45deg);
-  }
-  66% {
-    transform: rotateX(-25deg) rotateY(-30deg);
-  }
-}
+
 small {
   color: #999;
   text-align: center;
@@ -240,9 +209,55 @@ html, body {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   background: linear-gradient(45deg, #83a4d4, #b6fbff);
+  
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
+span.close {
+  display: flex;
+  margin-bottom: 8%;
+  justify-content: flex-end;
+}
+
+span.close.hover {
+  cursor: pointer;
+}
+
+#library-container {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 20%;
+}
+
+
+
+.book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid black;
+  height: 20vh;
+  width: 33vw;
+
+}
+
+@media only screen and (max-width: 600px) {
+  #library-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .book {
+    height: 50vh;
+    width: 80vw;
+  }
+}
+

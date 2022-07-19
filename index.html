@@ -11,27 +11,37 @@
 
 </head>
 
-<div class="form" id="form">
-  <div class="field book">
-    <div class="icon"></div>
-    <input class="input" id="book" type="text" placeholder="BOOK" autocomplete="off"/>
-  </div>
-  <div class="field author">
-    <div class="icon"></div>
-    <input class="input" id="author" type="text" placeholder="AUTHOR" autocomplete="off"/>
-  </div>
-  <div class="field pages">
-    <div class="icon"></div>
-    <input class="input" id="pages" type="text" placeholder="PAGES" autocomplete="off"/>
-  </div>
-  <div class="field read">
-    <div class="icon"></div>
-    <input class="input" id="read" type="text" placeholder="READ?" autocomplete="off"/>
-  </div>
-  <button class="button" id="submit">SUBMIT
-    <div class="side-top-bottom"></div>
-    <div class="side-left-right"></div>
-  </button><small>Fill in the form</small>
+<h1>Librarian</h1>
+<div class="newBtnContainer">
+  <button id="newBtn">+ Add Book</button>
 </div>
+
+  <div class="form" id="form">
+    <span class="close">&times;</span>
+    <div class="field title">
+      <div class="icon"></div>
+      <input class="input" id="title" type="text" placeholder="TITLE" autocomplete="off"/>
+    </div>
+    <div class="field author">
+      <div class="icon"></div>
+      <input class="input" id="author" type="text" placeholder="AUTHOR" autocomplete="off"/>
+    </div>
+    <div class="field pages">
+      <div class="icon"></div>
+      <input class="input" id="pages" type="text" placeholder="PAGES" autocomplete="off"/>
+    </div>
+    <div class="field read">
+      <div class="icon"></div>
+      <input class="input" id="read" type="text" placeholder="READ?" autocomplete="off"/>
+    </div>
+    <button class="button" id="submit">SUBMIT
+      <div class="side-top-bottom"></div>
+      <div class="side-left-right"></div>
+    </button><small>Fill in the form</small>
+  </div>
+
+
+<div id="library-container"></div>
 </body>
 </html>
+
