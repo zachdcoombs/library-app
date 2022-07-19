@@ -12,3 +12,5 @@ To do as of 7/18/22:
     Add "close x" to book card
 
     And I'm sure some other stuff I can't comprehend right now
+    
+    As of evening 7/18 all javascript is functioning and page behaves as it should
