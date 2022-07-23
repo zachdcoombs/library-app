@@ -2,15 +2,7 @@ What started as a quick library app for some class practice turned into this.
 
 This is the most up to date version that I'm happy with. 
 
-To do as of 7/18/22: 
-    Copy theme to background html and cards for each book (blue, red, white, grey, dropshadows)
-    Copy logic from v2 in to begin trying to bridge the two pieces together: 
-        get input from text fields
-        take that input and put it on to cards
-        display cards
-    On click of "new book" should open up current functional card
-    Add "close x" to book card
+You can view a live preview of the app at: https://zachdcoombs.github.io/library-app/
 
-    And I'm sure some other stuff I can't comprehend right now
-    
-    As of evening 7/18 all javascript is functioning and page behaves as it should
+Assignment:
+Build a library application that will allow users to store and recall books from a list, basically a simple CRUD style application.
